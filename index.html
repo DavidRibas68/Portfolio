@@ -11,7 +11,7 @@
         /* --- ESTILOS GENERALES --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         html { scroll-behavior: smooth; }
-        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3 { font-weight: 700; color: #111; }
         a { text-decoration: none; color: inherit; }
 
@@ -46,7 +46,7 @@
         
         /* --- SECCIÓN CONTACTO --- */
         #contacto { padding: 100px 10%; background-color: #111; color: #fff; text-align: center; }
-        #contacto h2 { color: #fff; }
+        #contacto h2 { color: #fff; margin-bottom: 10px; }
         .contacto-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
         
         footer { background: #000; color: #555; text-align: center; padding: 20px; font-size: 0.8rem; }
@@ -83,7 +83,7 @@
 
         <h3 class="categoria-titulo" data-aos="fade-up">Categoría 1 [Título por decidir]</h3>
         <div class="grid-proyectos">
-            <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+            <div class="proyecto" data-aos="fade-up">
                 <img src="foto1.jpg" alt="Proyecto 1">
                 <div class="info-proyecto">
                     <h3>Silla Ergonomica V1</h3>
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="proyecto" data-aos="fade-up" data-aos-delay="200">
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
                 <img src="foto2.jpg" alt="Proyecto 2">
                 <div class="info-proyecto">
                     <h3>Lámpara Modular</h3>
@@ -102,7 +102,7 @@
 
         <h3 class="categoria-titulo" data-aos="fade-up">Categoría 2 [Título por decidir]</h3>
         <div class="grid-proyectos">
-            <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+            <div class="proyecto" data-aos="fade-up">
                 <img src="foto3.jpg" alt="Proyecto 3">
                 <div class="info-proyecto">
                     <h3>Dispositivo Médico</h3>
@@ -110,7 +110,7 @@
                 </div>
             </div>
 
-            <div class="proyecto" data-aos="fade-up" data-aos-delay="200">
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
                 <img src="foto4.jpg" alt="Proyecto 4">
                 <div class="info-proyecto">
                     <h3>Mochila Urbana</h3>
@@ -121,7 +121,7 @@
 
         <h3 class="categoria-titulo" data-aos="fade-up">Categoría 3 [Título por decidir]</h3>
         <div class="grid-proyectos">
-            <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+            <div class="proyecto" data-aos="fade-up">
                 <img src="foto5.jpg" alt="Proyecto 5">
                 <div class="info-proyecto">
                     <h3>Altavoz Bluetooth</h3>
@@ -130,17 +130,17 @@
             </div>
         </div>
 
-        <h3 class="categoria-titulo" data-aos="fade-up">Categoría 4 [Título por decidir]</h3>
-        <div class="grid-proyectos" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="categoria-titulo">Categoría 4 [Título por decidir]</h3>
+        <div class="grid-proyectos">
             <p style="color: #666; font-style: italic;">Proyectos en desarrollo...</p>
         </div>
 
     </section>
 
     <section id="contacto">
-        <h2 data-aos="fade-up">¿Trabajamos juntos?</h2>
-        <p data-aos="fade-up" data-aos-delay="100">Actualmente buscando nuevas oportunidades y retos profesionales.</p>
-        <div class="contacto-links" data-aos="fade-up" data-aos-delay="200">
+        <h2>¿Trabajamos juntos?</h2>
+        <p>Actualmente buscando nuevas oportunidades y retos profesionales.</p>
+        <div class="contacto-links">
             <a href="mailto:davidribas2003@email.com" class="btn">Envíame un Email</a>
             <a href="https://www.linkedin.com/in/david-ribas" target="_blank" class="btn">Mi LinkedIn</a>
         </div>
@@ -154,7 +154,7 @@
     <script>
         AOS.init({
             once: true,
-            offset: 100
+            offset: 20 // Reducido a 20 para que las animaciones salten mucho antes
         });
     </script>
 </body>
