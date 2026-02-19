@@ -10,6 +10,11 @@
     
     <style>
         /* --- ESTILOS GENERALES --- */
+        :root {
+            /* ESTE ES TU COLOR CORPORATIVO. Si quieres cambiar el tono exacto, solo modifica este código hexadecimal */
+            --color-acento: #841624; 
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
         html { scroll-behavior: smooth; }
         body { background-color: #f8f9fa; color: #333; line-height: 1.6; overflow-x: hidden; }
@@ -19,14 +24,16 @@
         /* --- NAVEGACIÓN --- */
         nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); padding: 20px 50px; display: flex; justify-content: space-between; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .nav-links { display: flex; gap: 30px; }
-        .nav-links a:hover { color: #007BFF; transition: 0.3s; }
+        /* El menú cambia al color de tu logo al pasar el ratón */
+        .nav-links a:hover { color: var(--color-acento); transition: 0.3s; }
 
         /* --- SECCIÓN PRINCIPAL (HERO) --- */
         #inicio { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%); padding: 20px; }
         #inicio h1 { font-size: 4rem; margin-bottom: 10px; }
         #inicio p { font-size: 1.5rem; color: #666; margin-bottom: 30px; }
         .btn { padding: 15px 30px; background-color: #111; color: #fff; border-radius: 30px; font-weight: bold; transition: 0.3s; }
-        .btn:hover { background-color: #007BFF; color: #fff; transform: translateY(-3px); }
+        /* Los botones cambian al color de tu logo al pasar el ratón */
+        .btn:hover { background-color: var(--color-acento); color: #fff; transform: translateY(-3px); }
 
         /* --- SECCIÓN SOBRE MÍ --- */
         #sobre-mi { padding: 100px 10%; background-color: #fff; text-align: center; }
@@ -36,7 +43,8 @@
 
         /* --- SECCIÓN PORTFOLIO --- */
         #portfolio { padding: 100px 10%; background-color: #f8f9fa; }
-        .categoria-titulo { text-align: left; font-size: 1.8rem; margin: 40px 0 20px 0; color: #444; border-bottom: 2px solid #ddd; padding-bottom: 10px; }
+        /* La línea separadora de las categorías ahora es de tu color corporativo */
+        .categoria-titulo { text-align: left; font-size: 1.8rem; margin: 40px 0 20px 0; color: #444; border-bottom: 2px solid var(--color-acento); padding-bottom: 10px; }
         .grid-proyectos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .proyecto { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
         .proyecto:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
@@ -50,7 +58,7 @@
         #contacto h2 { color: #fff; margin-bottom: 10px; }
         .contacto-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
         
-        footer { background: #000; color: #555; text-align: center; padding: 20px; font-size: 0.8rem; }
+        footer { background: #000; color: #555; text-align: center; padding: 40px 20px; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -139,9 +147,9 @@
     </section>
 
     <section id="contacto">
-        <h2>¿Trabajamos juntos?</h2>
-        <p>Actualmente buscando nuevas oportunidades y retos profesionales.</p>
-        <div class="contacto-links">
+        <h2 data-aos="fade-up">¿Trabajamos juntos?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Actualmente buscando nuevas oportunidades y retos profesionales.</p>
+        <div class="contacto-links" data-aos="fade-up" data-aos-delay="200">
             <a href="mailto:davidribas2003@email.com" class="btn">Envíame un Email</a>
             <a href="https://www.linkedin.com/in/david-ribas" target="_blank" class="btn">Mi LinkedIn</a>
         </div>
@@ -153,8 +161,16 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // CONFIGURACIÓN MEJORADA DE LAS ANIMACIONES
         AOS.init({
             once: true,
+            offset: 0, 
+            duration: 800
+        });
+
+        // Obligamos a recalcular todo cuando las fotos terminan de cargar
+        window.addEventListener('load', function() {
+            AOS.refresh();
         });
     </script>
 </body>
