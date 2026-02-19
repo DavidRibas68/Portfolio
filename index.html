@@ -1,1 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio | Diseñador Industrial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        h1, h2, h3 { font-weight: 700; color: #111; }
+        a { text-decoration: none; color: inherit; }
 
+        /* --- NAVEGACIÓN --- */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); padding: 20px 50px; display: flex; justify-content: space-between; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a:hover { color: #007BFF; transition: 0.3s; }
+
+        /* --- SECCIÓN PRINCIPAL (HERO) --- */
+        #inicio { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(135deg, #ece9e6 0%, #ffffff 100%); padding: 20px; }
+        #inicio h1 { font-size: 4rem; margin-bottom: 10px; }
+        #inicio p { font-size: 1.5rem; color: #666; margin-bottom: 30px; }
+        .btn { padding: 15px 30px; background-color: #111; color: #fff; border-radius: 30px; font-weight: bold; transition: 0.3s; }
+        .btn:hover { background-color: #007BFF; color: #fff; transform: translateY(-3px); }
+
+        /* --- SECCIÓN PORTFOLIO --- */
+        #portfolio { padding: 100px 10%; background-color: #fff; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 50px; }
+        .grid-proyectos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .proyecto { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; }
+        .proyecto:hover { transform: translateY(-10px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .proyecto img { width: 100%; height: 250px; object-fit: cover; }
+        .info-proyecto { padding: 20px; }
+        .info-proyecto h3 { margin-bottom: 10px; }
+        .info-proyecto p { font-size: 0.9rem; color: #666; }
+
+        /* --- SECCIÓN SOBRE MÍ --- */
+        #sobre-mi { padding: 100px 10%; background-color: #f8f9fa; text-align: center; }
+        .perfil-container { max-width: 800px; margin: 0 auto; }
+        
+        /* --- SECCIÓN CONTACTO --- */
+        #contacto { padding: 100px 10%; background-color: #111; color: #fff; text-align: center; }
+        #contacto h2 { color: #fff; }
+        .contacto-links { margin-top: 30px; display: flex; justify-content: center; gap: 20px; }
+        
+        footer { background: #000; color: #555; text-align: center; padding: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo"><strong>TU NOMBRE</strong></div>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#portfolio">Proyectos</a>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    </nav>
+
+    <section id="inicio">
+        <h1 data-aos="fade-down" data-aos-duration="1000">HOLA, SOY [TU NOMBRE]</h1>
+        <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">Diseñador Industrial enfocado en crear soluciones funcionales y estéticas.</p>
+        <a href="#portfolio" class="btn" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">Ver mis trabajos</a>
+    </section>
+
+    <section id="portfolio">
+        <h2 class="section-title" data-aos="fade-up">Mis Proyectos</h2>
+        <div class="grid-proyectos">
+            
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="100">
+                <img src="foto1.jpg" alt="Proyecto 1">
+                <div class="info-proyecto">
+                    <h3>Silla Ergonomica V1</h3>
+                    <p>Diseño de mobiliario enfocado en la postura durante largas jornadas. Materiales: Madera contrachapada y acero.</p>
+                </div>
+            </div>
+
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="200">
+                <img src="foto2.jpg" alt="Proyecto 2">
+                <div class="info-proyecto">
+                    <h3>Lámpara Modular</h3>
+                    <p>Sistema de iluminación adaptable a diferentes espacios impreso en 3D y aluminio reciclado.</p>
+                </div>
+            </div>
+
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="300">
+                <img src="foto3.jpg" alt="Proyecto 3">
+                <div class="info-proyecto">
+                    <h3>Dispositivo Médico</h3>
+                    <p>Rediseño de inhalador para facilitar su uso en pacientes con movilidad reducida en las manos.</p>
+                </div>
+            </div>
+
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="400">
+                <img src="foto4.jpg" alt="Proyecto 4">
+                <div class="info-proyecto">
+                    <h3>Mochila Urbana</h3>
+                    <p>Prototipo textil con compartimentos termoformados para protección de equipos electrónicos.</p>
+                </div>
+            </div>
+
+            <div class="proyecto" data-aos="fade-up" data-aos-delay="500">
+                <img src="foto5.jpg" alt="Proyecto 5">
+                <div class="info-proyecto">
+                    <h3>Altavoz Bluetooth</h3>
+                    <p>Diseño conceptual de electrónica de consumo. Enfoque en acústica y acabados premium.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="sobre-mi">
+        <div class="perfil-container" data-aos="zoom-in">
+            <h2 class="section-title">Sobre mí</h2>
+            <p>Soy un diseñador industrial apasionado por entender cómo interactúan las personas con los objetos. Me gradué en [Nombre de tu Universidad] y tengo experiencia usando herramientas como SolidWorks, Rhinoceros, Keyshot y la suite de Adobe. Busco siempre el equilibrio entre la estética, la viabilidad de fabricación y la sostenibilidad.</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2 data-aos="fade-up">¿Trabajamos juntos?</h2>
+        <p data-aos="fade-up" data-aos-delay="100">Actualmente buscando nuevas oportunidades y retos profesionales.</p>
+        <div class="contacto-links" data-aos="fade-up" data-aos-delay="200">
+            <a href="mailto:tu-correo@email.com" class="btn">Envíame un Email</a>
+            <a href="https://linkedin.com/in/tu-perfil" target="_blank" class="btn">Mi LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [Tu Nombre]. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true, // La animación solo ocurre una vez al bajar
+            offset: 100 // Empieza a animarse un poco antes de llegar
+        });
+    </script>
+</body>
+</html>
